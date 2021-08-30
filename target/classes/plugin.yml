@@ -1,0 +1,16 @@
+# zDiscord
+name: zDiscord
+version: 1.4.0-SNAPSHOT
+api-version: 1.16
+
+#Credits
+author: Casuistry
+description: An easily configurable /discord command for your Minecraft server
+
+#Specifications
+main: org.casuistry.zdiscord.zDiscord
+load: POSTWORLD
+commands:
+    discord:
+      description: Get the discord link to our server
+      aliases: [zdiscord]

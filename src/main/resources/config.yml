@@ -1,0 +1,29 @@
+#-----------------------------------------------
+#  zDiscord, Version: 1.4.0 SpigotMC 1.8.8-1.17.1
+#  By Casuistry, Do not redistribute.
+#-----------------------------------------------
+
+# Want to receive the latest version/update news? Enabling this
+# will notify operators about new releases.
+notifyUpdates: true
+
+message:
+  # Should the message be presented to players upon joining the server?
+  presentOnJoin: false
+  
+  # Set what text lines should players see when they use /discord
+  text:
+  - "&b&lJoin our discord!"
+  - "&fhttps://discord.gg/default"
+ 
+  # Choose what players will see when they hover over the message
+  # and what link they should be prompted with when they click it. Nullify to disable.
+  textHover: "&fClick to go to our discord"
+  textClick: "https://discord.gg/default"
+
+# Mix up your discord command by adding a sound effect,
+# Make sure to use the correct sound enum for your Minecraft version!
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound:
+  enabled: false
+  value: "ENTITY_EXPERIENCE_ORB_PICKUP"
