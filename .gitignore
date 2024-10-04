@@ -1,0 +1,31 @@
+# IntelliJ
+.idea/
+out/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Maven
+target/
+build/
+build.xml
+dependency-reduced-pom.xml
+
+# Gradle
+.gradle/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+.DS_Store/
+Thumbs.db
+bin/
+dist/
+manifest.mf

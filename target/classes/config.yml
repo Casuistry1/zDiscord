@@ -1,11 +1,4 @@
-#-----------------------------------------------
-#  zDiscord, Version: 1.4.0 SpigotMC 1.8.8-1.17.1
-#  By Casuistry, Do not redistribute.
-#-----------------------------------------------
-
-# Want to receive the latest version/update news? Enabling this
-# will notify operators about new releases.
-notifyUpdates: true
+# zDiscord - By zaviar.dev for Minecraft Java 1.21.1
 
 message:
   # Should the message be presented to players upon joining the server?

@@ -1,85 +1,88 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.casuistry</groupId>
-  <artifactId>zdiscord</artifactId>
-  <version>1.4.0-SNAPSHOT</version>
- 
-  <name>zDiscord</name>
-  <url>https://www.spigotmc.org/resources/63241/</url>
-  <inceptionYear>2018</inceptionYear>
-  
-  <organization>
-  	<name>zDiscord - An easily configurable /discord command for your Minecraft server</name>
-  	<url>https://github.com/Casuistry1/zDiscord</url>
-  </organization>
-  
-  <licenses>
-  	<license>
-    	<name>GNU General Public License, Version 3.0</name>
-        <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
-        <distribution>repo</distribution>
-    </license>
-  </licenses>
-  
-  <properties>
-  	<project.build.sourceEnconding>UTF-8</project.build.sourceEnconding>
-  </properties>
-  
-  <dependencies>
-	<dependency>
-		<groupId>org.spigotmc</groupId>
-		<artifactId>spigot-api</artifactId>
-		<version>1.16.5-R0.1-SNAPSHOT</version>
-		<scope>provided</scope>
-	</dependency>
-  </dependencies>
-  
-  <repositories>
- 	<repository>
-	<id>spigot-repo</id>
-	<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-	</repository>
-  </repositories>
-  
-  <build>
- 	 <finalName>zDiscord</finalName>
-  	 <defaultGoal>clean package</defaultGoal>
-	 <plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.8.1</version>
-			<configuration>
-				<source>1.8</source>
-				<target>1.8</target>
-			</configuration>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-shade-plugin</artifactId>
-			<version>3.2.2</version>
-			<executions>
-				<execution>
-				<phase>package</phase>
-				<goals>
-					<goal>shade</goal>
-				</goals>
-				<configuration>
-					<createDependencyReducedPom>false</createDependencyReducedPom>
-				</configuration>
-				</execution>
-			</executions>
-		</plugin>
-	</plugins>
-	
-	<resources>
-		<resource>
-			<directory>src/main/resources</directory>
-			<filtering>true</filtering>
-		</resource>
-	</resources>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	</build>
-  
+    <name>zDiscord</name>
+    <groupId>dev.zaviar</groupId>
+    <artifactId>zdiscord</artifactId>
+    <version>1.5.0-SNAPSHOT</version>
+    <modelVersion>4.0.0</modelVersion>
+
+    <url>https://www.spigotmc.org/resources/63241/</url>
+    <inceptionYear>2018</inceptionYear>
+
+    <organization>
+        <name>Zaviar</name>
+        <url>https://zaviar.dev/</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>GNU General Public License, Version 3.0</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+        <java.version>21</java.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.sourceEncoding>UTF-8</maven-compiler-plugin.sourceEncoding>
+        <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.21.1-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>papermc</id>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <defaultGoal>clean package</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <release>${java.version}</release>
+                    <encoding>${maven-compiler-plugin.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven-shade-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
 </project>

@@ -1,6 +1,4 @@
-org\casuistry\zdiscord\zDiscord.class
-org\casuistry\zdiscord\commands\DiscordCommand.class
-org\casuistry\zdiscord\factory\DataManager.class
-org\casuistry\zdiscord\listeners\PlayerListener.class
-org\casuistry\zdiscord\factory\UpdateChecker$1.class
-org\casuistry\zdiscord\factory\UpdateChecker.class
+dev/zaviar/zdiscord/DataManager.class
+dev/zaviar/zdiscord/DiscordCommand.class
+dev/zaviar/zdiscord/zDiscord.class
+dev/zaviar/zdiscord/PlayerListener.class
