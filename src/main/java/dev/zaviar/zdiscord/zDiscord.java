@@ -53,6 +53,8 @@ public class zDiscord extends JavaPlugin implements Listener, CommandExecutor {
         this.getConfig().options().copyDefaults();
         saveDefaultConfig();
 
+        initialise();
+        
         Objects.requireNonNull(getCommand("discord")).setExecutor(this);
         Bukkit.getPluginManager().registerEvents(this, this);
 
@@ -94,7 +96,7 @@ public class zDiscord extends JavaPlugin implements Listener, CommandExecutor {
                 component.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, textClick));
             }
             if (textHover != null) {
-                component.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(textHover)));
+                component.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text(ChatColor.translateAlternateColorCodes('&', textHover))));
             }
             this.components.add(component);
         }
