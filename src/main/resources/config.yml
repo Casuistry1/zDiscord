@@ -1,22 +1,24 @@
 # zDiscord - By zaviar.dev for Minecraft Java 1.21.1
+# An easily configurable /discord command for your Minecraft server
 
 message:
-  # Should the message be presented to players upon joining the server?
+  # If the message should be presented to players when joining the server
   presentOnJoin: false
   
-  # Set what text lines should players see when they use /discord
+  # The message sent to players
   text:
-  - "&b&lJoin our discord!"
-  - "&fhttps://discord.gg/default"
- 
-  # Choose what players will see when they hover over the message
-  # and what link they should be prompted with when they click it. Nullify to disable.
+    - "&b&lJoin our discord!"
+    - "https://discord.gg/default"
+
+  # Set the message that is shown when hovering over the text
   textHover: "&fClick to go to our discord"
+
+  # What link players will be prompted with when they click it
   textClick: "https://discord.gg/default"
 
-# Mix up your discord command by adding a sound effect,
+# Optionally play a sound when a player executes the command
 # Make sure to use the correct sound enum for your Minecraft version!
-# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+# See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html for the latest list
 sound:
   enabled: false
   value: "ENTITY_EXPERIENCE_ORB_PICKUP"

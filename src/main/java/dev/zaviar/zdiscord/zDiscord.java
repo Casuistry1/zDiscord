@@ -2,7 +2,6 @@ package dev.zaviar.zdiscord;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
 
 /* -------------
  * LICENSE
@@ -25,7 +24,6 @@ import org.jetbrains.annotations.NotNull;
 public class zDiscord extends JavaPlugin {
 
     private static zDiscord instance;
-    private DataManager dataManager;
 
     @Override
     public void onEnable() {
@@ -37,24 +35,13 @@ public class zDiscord extends JavaPlugin {
         getCommand("discord").setExecutor(new DiscordCommand());
         Bukkit.getPluginManager().registerEvents(new PlayerListener(), this);
 
-        this.dataManager = new DataManager(this);
+        ConfigManager.getInstance().initialise();
 
         getLogger().info("The plugin has started!");
     }
 
-    @Override
-    public void onDisable() {
-        instance = null;
-    }
-
-    @NotNull
     public static zDiscord getInstance() {
         return instance;
-    }
-
-    @NotNull
-    public DataManager getDataManager() {
-        return dataManager;
     }
 
 }
