@@ -24,7 +24,7 @@
     </licenses>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-compiler-plugin.sourceEncoding>UTF-8</maven-compiler-plugin.sourceEncoding>
         <maven-shade-plugin.version>3.6.0</maven-shade-plugin.version>
@@ -34,7 +34,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.21.1-R0.1-SNAPSHOT</version>
+            <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

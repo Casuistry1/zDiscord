@@ -1,7 +1,7 @@
 name: zDiscord
-description: An easily configurable /discord command for your Minecraft server
+description: A simple /discord command for your Minecraft server
 version: 1.5.0-SNAPSHOT
-api-version: '1.21.1'
+api-version: '1.17'
 main: dev.zaviar.zdiscord.zDiscord
 authors: [ zaviar.dev ]
 folia-supported: true
@@ -9,4 +9,4 @@ load: POSTWORLD
 commands:
   discord:
     description: Get the discord link to our server
-    aliases: [zdiscord]
+    aliases: [ zdiscord ]

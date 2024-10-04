@@ -18,7 +18,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import javax.annotation.Nonnull;
 import java.io.File;
 import java.util.LinkedHashSet;
 import java.util.Objects;
@@ -54,7 +53,7 @@ public class zDiscord extends JavaPlugin implements Listener, CommandExecutor {
         saveDefaultConfig();
 
         initialise();
-        
+
         Objects.requireNonNull(getCommand("discord")).setExecutor(this);
         Bukkit.getPluginManager().registerEvents(this, this);
 
@@ -62,7 +61,7 @@ public class zDiscord extends JavaPlugin implements Listener, CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(@Nonnull CommandSender sender, @Nonnull Command cmd, @Nonnull String label, @Nonnull String[] args) {
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender.isOp() && args.length > 0 && args[0].equalsIgnoreCase("reload")) {
             sender.sendMessage(ChatColor.GRAY + "Reloading zDiscord...");
             initialise();
@@ -112,7 +111,7 @@ public class zDiscord extends JavaPlugin implements Listener, CommandExecutor {
         }
 
         // Play the sound if they are a player
-        if (commandSender instanceof Player player && soundEnabled) {
+        if (soundEnabled && commandSender instanceof Player player) {
             try {
                 Sound sound = Sound.valueOf(this.sound);
                 player.playSound(player.getLocation(), sound, 0.5f, 1f);
