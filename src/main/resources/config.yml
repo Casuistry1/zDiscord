@@ -1,5 +1,5 @@
 # zDiscord - By zaviar.dev for Minecraft Java 1.21.1
-# An easily configurable /discord command for your Minecraft server
+# A simple /discord command for your Minecraft server
 
 message:
   # If the message should be presented to players when joining the server
@@ -11,7 +11,7 @@ message:
     - "https://discord.gg/default"
 
   # Set the message that is shown when hovering over the text
-  textHover: "&fClick to go to our discord"
+  textHover: "Click to go to our discord"
 
   # What link players will be prompted with when they click it
   textClick: "https://discord.gg/default"
